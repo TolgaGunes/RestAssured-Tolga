@@ -37,6 +37,5 @@ public class SpartanTestWithParameters {
         // verify Blythe in the json payload/body
         assertTrue(response.body().asString().contains("Blythe"));
 
-
     }
 }
