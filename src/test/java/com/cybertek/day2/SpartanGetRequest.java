@@ -37,7 +37,7 @@ public class SpartanGetRequest {
         Assertions.assertEquals(response.contentType(),"application/json");
     }
 
-    @DisplayName("GET one spartab /api/spartans/3 and verify")
+    @DisplayName("GET one spartan /api/spartans/3 and verify")
     @Test
     public void test2 (){
         Response response = RestAssured.given().accept(ContentType.JSON).
