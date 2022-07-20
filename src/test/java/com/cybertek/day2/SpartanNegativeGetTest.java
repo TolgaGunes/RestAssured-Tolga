@@ -25,7 +25,7 @@ public class SpartanNegativeGetTest {
     public void test1() {
 
 
-        Response response = given().accept(ContentType.XML)
+        Response response = given().log().all().accept(ContentType.XML)
                 .when()
                 .get("/api/spartans/10");
         assertEquals(406, response.statusCode());
