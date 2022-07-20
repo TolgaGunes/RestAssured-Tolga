@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledIfSystemProperties;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 import java.util.HashMap;
@@ -32,7 +33,7 @@ public class SpartanTestWithParameters {
     public void test1() {
 
         Response response = given().accept(ContentType.JSON)
-                .and().pathParam("id",5)
+                .and().pathParam("id", 5)
                 .when().get("/api/spartans/{id}");
 
         assertEquals(200, response.statusCode());
@@ -44,12 +45,12 @@ public class SpartanTestWithParameters {
 
     @DisplayName("GET request to /api/spartan{id}")
     @Test
-    public void test2(){
+    public void test2() {
         Response response = given()
                 .accept(ContentType.JSON).and().pathParam("id", 500).
                 when().get("/api/spartan/{id}");
 
-        assertEquals(404,response.statusCode());
+        assertEquals(404, response.statusCode());
         assertEquals("application/json", response.getContentType());
         assertEquals(response.body().asString().contains("Not Found"), true);
 
@@ -63,7 +64,7 @@ public class SpartanTestWithParameters {
                 .and().queryParam("nameContains", "e")
                 .and().queryParam("gender", "Female")
                 .when().get("/api/spartans/search");
-        assertEquals(200,response.statusCode());
+        assertEquals(200, response.statusCode());
         assertEquals("application/json", response.contentType());
         assertTrue(response.body().asString().contains("Female"));
         assertTrue(response.body().asString().contains("Janette"));
@@ -91,6 +92,7 @@ public class SpartanTestWithParameters {
         assertTrue(response.body().asString().contains("Female"));
         assertTrue(response.body().asString().contains("Janette"));
 
-
     }
+
+
 }
