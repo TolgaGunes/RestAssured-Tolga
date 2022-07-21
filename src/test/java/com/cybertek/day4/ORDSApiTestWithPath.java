@@ -8,9 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ORDSApiTestWithPath extends HRTestBase {
 
-    @DisplayName("GET request")
+    @DisplayName("GET request to countries with PAth method")
     @Test
     public void test1() {
+
 
 
 
