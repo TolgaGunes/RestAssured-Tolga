@@ -43,7 +43,7 @@ public class ORDSApiTestWithParameters {
     public void test2(){
 
         Response response = given().accept(ContentType.JSON).log().all()
-                .queryParams("q","{\"job_id\": \"IT_PROG\"}")
+                .queryParam("q","{\"job_id\": \"IT_PROG\"}")
                 .when().get("/employees") ;
 
         assertEquals(200, response.statusCode());

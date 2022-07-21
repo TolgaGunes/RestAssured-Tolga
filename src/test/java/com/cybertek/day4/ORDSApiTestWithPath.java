@@ -76,5 +76,8 @@ public class ORDSApiTestWithPath extends HRTestBase {
             System.out.println("jobID = " + jobID);
             assertEquals("IT_PROG", jobID);
         }
+        //TASK
+        //print each name of IT Programmers
+
     }
 }
