@@ -62,8 +62,9 @@ public class SpartanTestWithPath extends SpartanTestBase {
         int firstID = response.path("id[0]");
         System.out.println("firstID = " + firstID);
 
-        String name = response.path("name[-0]");
+        String name = response.path("name[0]");
         System.out.println("name = " + name);
+
 
         String lastFirstName = response.path("name[-1]");
         System.out.println("lastFirstName = " + lastFirstName);
