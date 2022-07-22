@@ -57,5 +57,4 @@ public class HamcrestMatchersApiTest {
                 .body("teachers.firstName", hasItems("Alexander"));
 
     }
-
 }
