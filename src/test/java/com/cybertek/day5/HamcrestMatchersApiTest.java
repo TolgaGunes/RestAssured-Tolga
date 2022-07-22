@@ -55,6 +55,5 @@ public class HamcrestMatchersApiTest {
         given().accept(ContentType.JSON).get("http://api.cybertektraining.com/teacher/all")
                 .then().statusCode(200)
                 .body("teachers.firstName", hasItems("Alexander"));
-
     }
 }
