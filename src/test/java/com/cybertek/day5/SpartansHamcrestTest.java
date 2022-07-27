@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 public class SpartansHamcrestTest extends SpartanTestBase {
@@ -25,5 +25,7 @@ public class SpartansHamcrestTest extends SpartanTestBase {
                 .body("totalElement", is(4)).extract().response().jsonPath().getList("content.name");
         System.out.println(names);
     }
+
+
 
 }
