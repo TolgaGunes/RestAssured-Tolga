@@ -19,6 +19,8 @@ public class BookItTest {
 
     }
 
+    // create BookITUtil then create a method, that accepts email and password return token Bearer - Token
+
     String accessToken = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMjAyIiwiYXVkIjoic3R1ZGVudC10ZWFtLW1lbWJlciJ9.UQnmL58LBoFW-Opm5OPIv7AgFvupRq4cANOIBQdOlpI";
 
     @DisplayName("GET all campuses")
