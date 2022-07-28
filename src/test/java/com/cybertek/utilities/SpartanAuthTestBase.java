@@ -12,11 +12,5 @@ public class SpartanAuthTestBase {
 
         baseURI= "http://3.80.210.194:7000/";
 
-
-
-
-
     }
-
-
 }
