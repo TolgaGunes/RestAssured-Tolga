@@ -44,7 +44,6 @@ public class FormulaOneXmlTest {
         // get url
         String url = xmlPath.getString("MrData.DriverTable.Driver.@url");
         System.out.println("url = " + url);
-
     }
 
 }
