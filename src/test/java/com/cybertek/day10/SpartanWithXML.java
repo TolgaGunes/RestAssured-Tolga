@@ -57,10 +57,5 @@ public class SpartanWithXML extends SpartanAuthTestBase {
         List<String> names = xmlPath.getList("List.item.name");
         System.out.println("names = " + names);
 
-        // how to get value of attribute
-
-
-
     }
-
 }
