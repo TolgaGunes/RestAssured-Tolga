@@ -1,8 +1,9 @@
 package com.cybertek.utilities;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
-import static io.restassured.RestAssured.baseURI;
+import static io.restassured.RestAssured.*;
 
 public class SpartanNewBase {
 
@@ -10,7 +11,19 @@ public class SpartanNewBase {
     public static void init() {
         //save base url inside this variable so that we do not need to type each http method
 
-        baseURI= "http://3.80.210.194:7000/";
-
+        baseURI= "http://3.80.210.194";
+        port=7000;
+        basePath = "/api";
     }
+
+    @AfterAll
+    public static void close() {
+        // reset the info we set above, method comes from restassured (if we work on multiple IPs.
+        reset();
+    }
+
+
+
+
+
 }
