@@ -58,7 +58,7 @@ public class PutAndPatchRequestDemo extends SpartanTestBase {
     @DisplayName("DELETE one spartan")
     @Test
     public void deleteSpartan(){
-        int idToDelete= 116;
+        int idToDelete= 114;
 
 
         given().pathParam("id",idToDelete)
@@ -68,7 +68,4 @@ public class PutAndPatchRequestDemo extends SpartanTestBase {
         //send a get request after you delete make sure you are getting 404
 
     }
-
-
-
 }
