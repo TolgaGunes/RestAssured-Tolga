@@ -1,6 +1,7 @@
 package com.cybertek.day12;
 
 import com.cybertek.utilities.SpartanNewBase;
+import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 
@@ -43,6 +44,7 @@ public class OldRestAssured extends SpartanNewBase {
                 .contentType(ContentType.JSON)
                 .body("id[0]", is(1))
                 .body("id[5]",is(199))
+                .logDetail(LogDetail.ALL)
         .when()
                 .get("/spartans");
     }
