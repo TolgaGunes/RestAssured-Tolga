@@ -21,6 +21,4 @@ public class Employee {
     private String jobId;
     private int salary;
 
-
-
 }
